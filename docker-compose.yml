@@ -1,0 +1,12 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: stock_visualizer
+    ports:
+      - "5005:5000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
